@@ -1,3 +1,21 @@
+var randomQuotes = [
+	'What will you do today, Napoleon?'
+];
+
+function tick() {
+  const element = (
+    <div class="clock">
+			<div class="glass"></div>
+			<h1 id="main-clock">{new Date().toLocaleTimeString()}</h1>
+		</div>
+  );
+  ReactDOM.render(
+    element,
+    document.getElementById('root')
+  );
+}
+
+// old clock code
 function startTime() {
 	var today = new Date(),
 	h = today.getHours(),
@@ -23,5 +41,6 @@ function addLeadingZero(i) {
 
 
 (function(){
-	setInterval(startTime, 500);
+	//setInterval(startTime, 500);
+	setInterval(tick, 1000);
 })();
