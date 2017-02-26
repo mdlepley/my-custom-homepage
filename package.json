@@ -1,0 +1,19 @@
+{
+  "name": "my-custom-homepage",
+  "version": "1.0.0",
+  "description": "Your very own...cheese pizza.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdlepley/my-custom-homepage.git"
+  },
+  "author": "Matt Lepley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdlepley/my-custom-homepage/issues"
+  },
+  "homepage": "https://github.com/mdlepley/my-custom-homepage#readme"
+}
