@@ -36,7 +36,7 @@ html{
 
 body{
 	background-color: #693;
-	background: url('../images/blur-cubes-wallpaper.jpg') fixed;
+	background: url('../images/geometry_25-blur.jpg') fixed;
 }
 
 
@@ -48,15 +48,16 @@ body{
 /*
 	====== Content ============
 */
-.clock{
+#react-clock {
 	position: relative;
 	width: 40em;
 	margin: 0 auto;
 	top: 100px;
 	text-align: center;
+	color: #ffffff;
 }
 
-.clock div{
+#react-clock .glass {
 	height: 50px;
 	border-style: solid;
 	border-color: rgba(255,255,255,0.3);
@@ -67,7 +68,7 @@ body{
 	-webkit-transform: skewx(-60deg);
 }
 
-.clock h1{
+#react-clock .main-clock {
 	position: relative;
 	top: -150px;
 	font-family: Helvetica;
