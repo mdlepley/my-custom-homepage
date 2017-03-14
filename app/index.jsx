@@ -1,14 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Clock from './clock';
 
 class ReactClock extends React.Component {
-    render() {
-        return (
-					<div className='clock'>
-						This is a test.
-					</div>
-        )
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      time: new Date().toLocaleTimeString()
     }
+  }
+
+  tick(ev) {
+    this.setState({ time: ev.target.value })
+  }
+
+  render() {
+    return (
+      <Clock time={ this.state.time } className='main-clock' />
+    )
+  }
 }
 
 ReactDOM.render(<ReactClock /> , document.getElementById('react-clock-2'));
@@ -18,9 +29,9 @@ ReactDOM.render(<ReactClock /> , document.getElementById('react-clock-2'));
 // old, but working-ish, clock code
 function tick() {
   const element = (
-    <div class="clock">
-			<div class="glass"></div>
-			<h1 class="main-clock">{new Date().toLocaleTimeString()}</h1>
+    <div className="clock">
+			<div className="glass"></div>
+			<h1 className="main-clock">{new Date().toLocaleTimeString()}</h1>
 		</div>
   );
   ReactDOM.render(
@@ -38,30 +49,3 @@ setInterval(tick, 1000);
 // var randomQuotes = [
 // 	'What will you do today, Napoleon?'
 // ];
-
-
-// // old clock code
-// function startTime() {
-// 	var today = new Date(),
-// 	h = today.getHours(),
-// 	m = today.getMinutes(),
-// 	s = today.getSeconds(),
-// 	clockEl = document.getElementById("main-clock");
-//
-// 	m = addLeadingZero(m);
-// 	s = addLeadingZero(s);
-//
-// 	clockEl.innerHTML = h + " " + m + " " + s;
-//
-// }
-//
-// function addLeadingZero(i) {
-// 	// add a zero in front of numbers < 10
-// 	if (i<10)
-// 	  {
-// 	  	i="0" + i;
-// 	  }
-// 	return i;
-// }
-//
-//
